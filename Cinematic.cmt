@@ -1,0 +1,14 @@
+Name=Cinematic
+Author=dotpy
+Links=https://raw.githubusercontent.com/HueSamai/CinematicMod/master/Cinematic.dll
+Message=https://raw.githubusercontent.com/HueSamai/CinematicMod/master/master
+LatestVersion=https://raw.githubusercontent.com/HueSamai/CinematicMod/main/version
+[Editable] KeybindMoveForward=upArrow
+[Editable] KeybindMoveBackward=downArrow
+[Editable] KeybindMoveRight=rightArrow
+[Editable] KeybindMoveLeft=leftArrow
+[Editable] KeybindMoveUp=q
+[Editable] KeybindMoveDown=e
+[Editable] KeybindToggleFreecam=f1
+[Editable] KeybindLockFreecam=f2
+[Editable] KeybindToggleKillVolumes=f3
