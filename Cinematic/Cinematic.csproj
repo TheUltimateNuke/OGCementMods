@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+	  <TargetFramework>netstandard2.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Reference Include="BepInEx">
+			<HintPath>D:/SteamLibrary/steamapps/common/Gang Beasts/BepInEx/core/BepInEx.dll</HintPath>
+		</Reference>
+		<Reference Include="Cement">
+			<HintPath>D:/SteamLibrary/steamapps/common/Gang Beasts/BepInEx/plugins/Cement/Cement.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>D:/SteamLibrary/steamapps/common/Gang Beasts/Gang Beasts_Data/Managed/UnityEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>D:/SteamLibrary/steamapps/common/Gang Beasts/Gang Beasts_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>D:/SteamLibrary/steamapps/common/Gang Beasts/Gang Beasts_Data/Managed/Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InputSystem">
+			<HintPath>D:/SteamLibrary/steamapps/common/Gang Beasts/Gang Beasts_Data/Managed/Unity.InputSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="com.unity.multiplayer-hlapi.Runtime">
+			<HintPath>D:/SteamLibrary/steamapps/common/Gang Beasts/Gang Beasts_Data/Managed/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+		</Reference>
+		<!--NewReference-->
+	</ItemGroup>
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="COPY Cinematic.cmt &quot;D:\SteamLibrary\steamapps\common\Gang Beasts\Mods&quot;" />
+	</Target>
+</Project>

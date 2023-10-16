@@ -1,8 +1,10 @@
 Name=Cinematic
 Author=dotpy
-Links=https://raw.githubusercontent.com/HueSamai/CinematicMod/master/Cinematic.dll
-Message=https://raw.githubusercontent.com/HueSamai/CinematicMod/master/master
-LatestVersion=https://raw.githubusercontent.com/HueSamai/CinematicMod/main/version
+
+Links=https://github.com/HueSamai/CementMods/raw/Cinematic/build/Cinematic.dll
+Message=https://github.com/HueSamai/CementMods/raw/Cinematic//message
+LatestVersion=https://github.com/HueSamai/CementMods/raw/Cinematic/version
+
 [Editable] KeybindMoveForward=upArrow
 [Editable] KeybindMoveBackward=downArrow
 [Editable] KeybindMoveRight=rightArrow

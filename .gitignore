@@ -1,0 +1,6 @@
+*/build/*
+*/bin
+*/obj
+CementMods.sln
+
+!Cinematic/build/Cinematic.dll

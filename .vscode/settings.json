@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.when": "pseudo",
+        "*.bfly": "pseudocode",
+        "windows.h": "c",
+        "fileapi.h": "c"
+    }
+}
