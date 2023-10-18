@@ -24,7 +24,7 @@ public class VotingSystem
 
     public VotingSystem(float time, MapUIBit[] mapBits, int numberOfCollumns, Transform canvasParent)
     {
-        Cement.Log("Creating voting system!");
+        Cement.Log($"Creating voting system! {mapBits.Length}");
         mapBitsLength = mapBits.Length;
         this.mapBits = mapBits;
         this.numberOfCollumns = numberOfCollumns;
