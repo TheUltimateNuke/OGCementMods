@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using InputModule;
+using CementTools.Modules.InputModule;
 using CementTools;
 using Femur;
 

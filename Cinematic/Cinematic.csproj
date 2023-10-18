@@ -9,7 +9,7 @@
 			<HintPath>D:/SteamLibrary/steamapps/common/Gang Beasts/BepInEx/core/BepInEx.dll</HintPath>
 		</Reference>
 		<Reference Include="Cement">
-			<HintPath>D:/SteamLibrary/steamapps/common/Gang Beasts/BepInEx/plugins/Cement/Cement.dll</HintPath>
+			<HintPath>D:\SteamLibrary\steamapps\common\Gang Beasts\BepInEx\plugins\Cement\Cement.dll</HintPath>
 		</Reference>
 		<Reference Include="UnityEngine">
 			<HintPath>D:/SteamLibrary/steamapps/common/Gang Beasts/Gang Beasts_Data/Managed/UnityEngine.dll</HintPath>

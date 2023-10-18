@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using CementTools;
-using InputModule;
+using CementTools.Modules.InputModule;
 using System.Collections.Generic;
 using Femur;
 using Random = UnityEngine.Random;
