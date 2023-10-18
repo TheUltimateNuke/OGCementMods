@@ -147,6 +147,7 @@ namespace BetterMapSelection
 
                 _addedBaseMaps = true;
                 Cement.Log("Added base maps!");
+                SpawnCanvas(GetCanvas().transform);
             }
 
             StartCoroutine(_AddBaseMaps());
@@ -222,7 +223,10 @@ namespace BetterMapSelection
             {
                 AddBaseMaps(canvas.transform);
             }
-            SpawnCanvas(canvas.transform);
+            else
+            {
+                SpawnCanvas(canvas.transform);
+            }
 
             DisableMenuHandler();
         }
