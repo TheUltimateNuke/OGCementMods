@@ -32,6 +32,9 @@ public class CinematicMod : CementMod
     {
         SceneManager.sceneLoaded += OnSceneChanged;
         SceneManager.sceneUnloaded += OnSceneUnload;
+
+        modFile.ChangedValues += Rebind;
+        
         StartCoroutine(WaitToStart());
     }
 
@@ -42,6 +45,19 @@ public class CinematicMod : CementMod
         camera = Camera.main.gameObject;
         keybindManager = new CinematicKeybindManager(modFile);
         
+        keybindManager.BindForward(MoveForward);
+        keybindManager.BindBackward(MoveBackward);
+        keybindManager.BindRight(MoveRight);
+        keybindManager.BindLeft(MoveLeft);
+        keybindManager.BindUp(MoveUp);
+        keybindManager.BindDown(MoveDown);
+        keybindManager.BindToggleCam(ToggleCam, false);
+        keybindManager.BindToggleLock(ToggleLock, false);
+        keybindManager.BindToggleKillVolumes(CementModSingleton.Get<RemoveKillVolume>().ToggleKillVolumes, false);
+    }
+
+    public void Rebind()
+    {
         keybindManager.BindForward(MoveForward);
         keybindManager.BindBackward(MoveBackward);
         keybindManager.BindRight(MoveRight);
