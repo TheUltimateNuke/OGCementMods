@@ -1,7 +1,7 @@
-Name=Gore 
-Author=dotpy 
-Message=https://github.com/HueSamai/CementMods/raw/main/Gore/Message 
-CementFile=https://github.com/HueSamai/CementMods/raw/main/Gore/Gore.cmt 
-Links=https://github.com/HueSamai/CementMods/raw/main/Gore/build/Gore.dll,https://github.com/HueSamai/CementMods/raw/main/Gore/gore 
-LatestVersion=https://github.com/HueSamai/CementMods/raw/main/Gore/version 
-[Editable] [Float] VelocityThreshold=14 
+Name=Gore
+Author=dotpy
+Message=https://github.com/HueSamai/CementMods/raw/main/Gore/Message
+CementFile=https://github.com/HueSamai/CementMods/raw/main/Gore/Gore.cmt
+Links=https://github.com/HueSamai/CementMods/raw/main/Gore/build/Gore.dll,https://github.com/HueSamai/CementMods/raw/main/Gore/gore
+LatestVersion=https://github.com/HueSamai/CementMods/raw/main/Gore/version
+[Editable] [Float] VelocityThreshold=14
