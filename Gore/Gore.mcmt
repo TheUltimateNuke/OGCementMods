@@ -1,6 +1,6 @@
 Name=Gore
 Author=dotpy
-Message={}/Message
+Message={}/message
 CementFile={}/Gore.cmt
 Links={}/build/Gore.dll,{}/gore
 LatestVersion={}/version
