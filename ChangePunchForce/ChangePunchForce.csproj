@@ -37,4 +37,8 @@
 		</Reference>
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="COPY ChangePunchForce.cmt &quot;D:\SteamLibrary\steamapps\common\Gang Beasts\Mods&quot;" />
+	</Target>
+
 </Project>
