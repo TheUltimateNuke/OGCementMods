@@ -1,0 +1,8 @@
+Name=Gore
+Author=dotpy
+Message={}/Message
+CementFile={}/Gore.cmt
+Links={}/build/Gore.dll,{}/gore
+LatestVersion={}/version
+
+[Editable] [Float] VelocityThreshold=14
