@@ -50,4 +50,7 @@
 		<!--NewReference-->
   	</ItemGroup>
 
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="COPY Totems.cmt &quot;D:\SteamLibrary\steamapps\common\Gang Beasts\Mods&quot;" />
+	</Target>
 </Project>
