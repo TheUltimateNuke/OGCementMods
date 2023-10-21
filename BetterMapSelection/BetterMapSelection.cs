@@ -127,6 +127,18 @@ namespace BetterMapSelection
             StartCoroutine(_());
         }
 
+        private void EnableMenuHandler()
+        {
+            IEnumerator _()
+            {
+                yield return new WaitUntil(() => FindObjectOfType<MenuHandlerGamemodes>() != null);
+                _menuHandler = FindObjectOfType<MenuHandlerGamemodes>();
+                _menuHandler.enabled = true;
+            }
+
+            StartCoroutine(_());
+        }
+
         private void AddBaseMaps(Transform canvasParent)
         {
             IEnumerator _AddBaseMaps()
@@ -191,6 +203,8 @@ namespace BetterMapSelection
             {
                 parent.Find(child).gameObject.SetActive(true);
             }
+
+            EnableMenuHandler();
         }
 
         private void OnDisable()
