@@ -184,6 +184,8 @@ namespace BetterMapSelection
 
         private void EnableUI()
         {
+            if (_localBeastMenu == null && !TrySettingLocalBeastMenu()) return;
+        
             Transform parent = _localBeastMenu.transform.Find("UI/GameModeSelection");
             foreach (string child in _childrenToDisable)
             {
