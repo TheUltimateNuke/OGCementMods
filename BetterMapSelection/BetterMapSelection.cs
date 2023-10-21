@@ -120,9 +120,11 @@ namespace BetterMapSelection
 
         IEnumerator SetMenuHandler()
         {
+            _busySettingMenuHandler = true;
             yield return new WaitUntil(() => FindObjectOfType<MenuHandlerGamemodes>(true) != null);
             _menuHandler = FindObjectOfType<MenuHandlerGamemodes>(true);
             _menuHandler.enabled = _menuHandlerActive;
+            _busySettingMenuHandler = false;
         }
 
         private void DisableMenuHandler()
