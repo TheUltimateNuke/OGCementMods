@@ -55,6 +55,9 @@ namespace BetterMapSelection
         private MenuHandlerGamemodes _menuHandler;
         private GameObject _localBeastMenu;
 
+        private bool _menuHandlerActive = false;
+        private bool _busySettingMenuHandler = false;
+
         private void Awake()
         {
             _singleton = this;
@@ -115,28 +118,49 @@ namespace BetterMapSelection
             _singleton._AddMap(mapName, mapImage);
         }
 
+        IEnumerator SetMenuHandler()
+        {
+            yield return new WaitUntil(() => FindObjectOfType<MenuHandlerGamemodes>(true) != null);
+            _menuHandler = FindObjectOfType<MenuHandlerGamemodes>(true);
+            _menuHandler.enabled = _menuHandlerActive;
+        }
+
         private void DisableMenuHandler()
         {
-            IEnumerator _()
+            if (_menuHandler == null)
             {
-                yield return new WaitUntil(() => FindObjectOfType<MenuHandlerGamemodes>() != null);
-                _menuHandler = FindObjectOfType<MenuHandlerGamemodes>();
+                if (_busySettingMenuHandler)
+                {
+                    _menuHandlerActive = false;
+                }
+                else
+                {
+                    StartCoroutine(SetMenuHandler());
+                }
+            } 
+            else
+            {
                 _menuHandler.enabled = false;
             }
-
-            StartCoroutine(_());
         }
 
         private void EnableMenuHandler()
         {
-            IEnumerator _()
+            if (_menuHandler == null)
             {
-                yield return new WaitUntil(() => FindObjectOfType<MenuHandlerGamemodes>() != null);
-                _menuHandler = FindObjectOfType<MenuHandlerGamemodes>();
+                if (_busySettingMenuHandler)
+                {
+                    _menuHandlerActive = true;
+                }
+                else
+                {
+                    StartCoroutine(SetMenuHandler());
+                }
+            } 
+            else
+            {
                 _menuHandler.enabled = true;
             }
-
-            StartCoroutine(_());
         }
 
         private void AddBaseMaps(Transform canvasParent)
@@ -220,8 +244,6 @@ namespace BetterMapSelection
 
         private void OnMenuLoad()
         {
-            _playersReady = false;
-
             if (!_menuLoadedBefore)
             {
                 SetupValuesFromAssetBundles();
@@ -253,6 +275,8 @@ namespace BetterMapSelection
             {
                 return;
             }
+
+            _playersReady = false;
 
             if (scene.name == "Menu")
                 OnMenuLoad();
