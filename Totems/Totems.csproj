@@ -23,9 +23,6 @@
 		<Reference Include="Unity.RenderPipelines.Universal.Runtime">
 			<HintPath>D:\SteamLibrary\steamapps\common\Gang Beasts\Gang Beasts_Data\Managed\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
 		</Reference>
-		<Reference Include="SceneModule">
-			<HintPath>D:\SteamLibrary\steamapps\common\Gang Beasts\Gang Beasts_Data\modcache\dotpy.SceneModule\SceneModule.dll</HintPath>
-		</Reference>
 		<Reference Include="UnityEngine.AudioModule">
 			<HintPath>D:\SteamLibrary\steamapps\common\Gang Beasts\Gang Beasts_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
 		</Reference>
@@ -52,8 +49,6 @@
 
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="COPY Totems.cmt &quot;D:\SteamLibrary\steamapps\common\Gang Beasts\Mods&quot;" />
-	</Target>
-	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="COPY &quot;$(TargetPath)&quot; build" />
 	</Target>
 </Project>
