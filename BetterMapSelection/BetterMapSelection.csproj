@@ -2,6 +2,7 @@
 
   	<PropertyGroup>
     	<TargetFramework>netstandard2.0</TargetFramework>
+    	<BaseOutputPath>bin</BaseOutputPath>
   	</PropertyGroup>
 
   	<ItemGroup>
@@ -56,7 +57,14 @@
 		<!--NewReference-->
   	</ItemGroup>
 
+  	<ItemGroup>
+  	  <Folder Include="build\" />
+  	</ItemGroup>
+
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="COPY BetterMapSelection.cmt &quot;D:\SteamLibrary\steamapps\common\Gang Beasts\Mods&quot;" />
+	</Target>
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="COPY &quot;$(TargetPath)&quot; build" />
 	</Target>
 </Project>

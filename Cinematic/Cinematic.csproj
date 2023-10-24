@@ -31,4 +31,7 @@
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="COPY Cinematic.cmt &quot;D:\SteamLibrary\steamapps\common\Gang Beasts\Mods&quot;" />
 	</Target>
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="COPY &quot;$(TargetPath)&quot; build" />
+	</Target>
 </Project>

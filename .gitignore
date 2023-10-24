@@ -1,9 +1,3 @@
-*/build/*
 */bin
 */obj
-
-!Cinematic/build/Cinematic.dll
-!BetterMapSelection/build/BetterMapSelection.dll
-!Gore/build/Gore.dll
-!Totems/build/Totems.dll
-!ChangePunchForce/build/ChangePunchForce.dll
+.vs

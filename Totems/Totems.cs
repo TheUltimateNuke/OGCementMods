@@ -55,7 +55,7 @@ public class Totems : CementMod
         yield return new WaitUntil(() => SceneManager.GetActiveScene().name == "Menu");
         try{
     
-        Cement.Singleton.Log("MOAI MOD HAS AWOKEN");
+        Cement.Log("MOAI MOD HAS AWOKEN");
         // Load asset of type GameObject called "Level" from the bundle "customlevel.unity3d",
         // which is in the Assets folder
         AssetBundle moai = AssetBundle.LoadFromFile(Path.Combine(modDirectoryPath, "totems"));
@@ -75,7 +75,7 @@ public class Totems : CementMod
         moai.Unload(false);
 
         rendererFeatures = typeof(ScriptableRenderer).GetProperty("rendererFeatures", BindingFlags.NonPublic | BindingFlags.Instance);
-        Cement.Singleton.Log(rendererFeatures);
+        Cement.Log(rendererFeatures);
 
         scriptableRenderer = Camera.main.gameObject.GetComponent<UniversalAdditionalCameraData>().scriptableRenderer;
 
@@ -100,7 +100,7 @@ public class Totems : CementMod
         }
         catch(Exception e)
         {
-            Cement.Singleton.Log(e);
+            Cement.Log(e);
         }
     }
 
