@@ -123,7 +123,7 @@ public class CinematicMod : CementMod
             return;
         }
 
-        camera.transform.position += speed * Time.deltaTime * camera.transform.up;
+        camera.transform.position += speed * Time.deltaTime * Vector3.up;
     }
 
     private void MoveDown()
@@ -133,7 +133,7 @@ public class CinematicMod : CementMod
             return;
         }
 
-        camera.transform.position -= speed * Time.deltaTime * camera.transform.up;
+        camera.transform.position -= speed * Time.deltaTime * Vector3.up;
     }
 
     private void MoveBackward()
