@@ -63,6 +63,8 @@
 
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="COPY &quot;$(TargetPath)&quot; build" />
-		<Exec Command="COPY BetterMapSelection.cmt &quot;D:\SteamLibrary\steamapps\common\Gang Beasts\Mods&quot;" />
+		<!--<Exec Command="COPY BetterMapSelection.cmt &quot;D:\SteamLibrary\steamapps\common\Gang Beasts\Mods&quot;" /> -->
+		<Exec Command="COPY &quot;$(TargetPath)&quot; &quot;D:\SteamLibrary\steamapps\common\Gang Beasts\Gang Beasts_Data\modcache\dotpy.BetterMapSelection&quot;" />
+
 	</Target>
 </Project>

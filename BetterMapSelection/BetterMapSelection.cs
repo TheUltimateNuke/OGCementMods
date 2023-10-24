@@ -279,6 +279,7 @@ namespace BetterMapSelection
             }
 
             _playersReady = false;
+            _seenLobby = false;
 
             if (scene.name == "Menu")
                 OnMenuLoad();
@@ -402,6 +403,7 @@ namespace BetterMapSelection
             return true;
         }
 
+        private bool _seenLobby = false;
         private void Update()
         {
             if (!modFile.GetBool("UseCustomMenu"))
@@ -431,6 +433,12 @@ namespace BetterMapSelection
 
             if (IsLocalLobby())
             {
+                if (!_seenLobby)
+                {
+                    _tracker.ForceAllAToB(BeastUtils.PlayerState.Ready, BeastUtils.PlayerState.Designing);
+                    _seenLobby = true;
+                }
+
                 if (_playersReady)
                 {
                     _tracker.ForceAllAToB(BeastUtils.PlayerState.Designing, BeastUtils.PlayerState.Ready);
