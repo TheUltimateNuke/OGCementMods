@@ -1,9 +1,11 @@
 ﻿using CementTools;
-using UnityEngine;
-using Femur;
+using Il2CppFemur;
+using System;
 
 public class ChangePunchForce : CementMod
 {
+    public ChangePunchForce(IntPtr ptr) : base(ptr) { }
+
     public void Update()
     {
         float multiplier = modFile.GetFloat("PunchForceMultiplier");
