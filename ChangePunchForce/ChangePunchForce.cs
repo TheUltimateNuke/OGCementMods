@@ -1,7 +1,9 @@
 ﻿using CementTools;
 using Il2CppFemur;
+using MelonLoader;
 using System;
 
+[RegisterTypeInIl2Cpp]
 public class ChangePunchForce : CementMod
 {
     public ChangePunchForce(IntPtr ptr) : base(ptr) { }
