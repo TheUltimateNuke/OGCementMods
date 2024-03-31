@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -12,6 +12,6 @@
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
 	  <Exec Command="COPY &quot;$(TargetPath)&quot; build" />
-		<Exec Command="COPY ChangePunchForce.cmt &quot;D:\SteamLibrary\steamapps\common\Gang Beasts\Mods&quot;" />
+		<Exec Command="COPY ChangePunchForce.cmt &quot;D:\SteamLibrary\steamapps\common\Gang Beasts\CementMods&quot;" />
 	</Target>
 </Project>
