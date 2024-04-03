@@ -1,21 +1,28 @@
 ﻿using CementTools;
 using Il2CppFemur;
-using MelonLoader;
+using Il2CppInterop.Runtime.Injection;
 using System;
 
-[RegisterTypeInIl2Cpp]
-public class ChangePunchForce : CementMod
+namespace ChangePunchForce
 {
-    public ChangePunchForce(IntPtr ptr) : base(ptr) { }
-
-    public void Update()
+    public class ChangePunchForce : CementMod
     {
-        float multiplier = modFile.GetFloat("PunchForceMultiplier");
-        foreach (Actor actor in FindObjectsOfType<Actor>())
+        public ChangePunchForce(IntPtr ptr) : base(ptr) { }
+
+        public ChangePunchForce() : base(ClassInjector.DerivedConstructorPointer<ChangePunchForce>())
         {
-            if (actor.ControlledBy == Actor.ControlledTypes.Human)
+            ClassInjector.DerivedConstructorBody(this);
+        }
+
+        public void Update()
+        {
+            float multiplier = modFile.GetFloat("PunchForceMultiplier");
+            foreach (Actor actor in FindObjectsOfType<Actor>())
             {
-                actor._punchForceModifer = multiplier;
+                if (actor.ControlledBy == Actor.ControlledTypes.Human)
+                {
+                    actor._punchForceModifer = multiplier;
+                }
             }
         }
     }
