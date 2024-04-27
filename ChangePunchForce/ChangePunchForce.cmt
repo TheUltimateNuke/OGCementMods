@@ -1,8 +1,0 @@
- 
-Name=Change Punch Force 
-Author=dotpy 
-CementFile=https://github.com/TheUltimateNuke/OGCementMods/raw/il2cpp/ChangePunchForce/ChangePunchForce.cmt 
-Message=https://github.com/TheUltimateNuke/OGCementMods/raw/il2cpp/ChangePunchForce/message 
-LatestVersion=https://github.com/TheUltimateNuke/OGCementMods/raw/il2cpp/ChangePunchForce/version 
-Links=https://github.com/TheUltimateNuke/OGCementMods/raw/il2cpp/ChangePunchForce/build/ChangePunchForce.dll 
-[Editable] [Float] PunchForceMultiplier=1 

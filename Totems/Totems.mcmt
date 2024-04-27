@@ -1,6 +1,0 @@
-Name=Totems
-Author=Cement Team
-CementFile={}/Totems.cmt
-Links={}/build/Totems.dll,{}/totems,https://github.com/HueSamai/CementMods/raw/main/BetterMapSelection/BetterMapSelection.cmt
-Message={}/message
-LatestVersion={}/version

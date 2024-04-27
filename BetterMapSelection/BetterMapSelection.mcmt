@@ -1,7 +1,0 @@
-Name=BetterMapSelection
-Author=dotpy
-Message={}/message
-CementFile={}/BetterMapSelection.cmt
-Links={}/build/BetterMapSelection.dll,{}/BMSHelper.dll,{}/bettermapselection
-LatestVersion={}/version
-[Editable][Boolean] UseCustomMenu=true
